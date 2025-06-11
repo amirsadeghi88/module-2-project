@@ -1,33 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { use, useEffect, useState } from 'react'
 import './App.css'
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar.jsx";
+import Footer from './Components/Footer.jsx';
+import HomePage from "./Pages/Homepage.jsx";
+import DogDetailsPage from './Pages/DogDetailsPage.jsx';
+import AddDogPage from './Pages/AddDogPage.jsx';
+import UpdateDogPage from './Pages/UpdateDogPage.jsx';
+import NotFoundPage from './Pages/NotFoundPage.jsx';
+import axios from 'axios';
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [data, setData] = useState([]);
+  useEffect(()=>{
+axios.get("http://localhost:4000/dogs")
+.then((res)=>{
+  console.log(res)
+  setData(res.data);
+})
+.catch(err=>console.log(err))
+  }, [])
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <main>
+    <Navbar />
+      <section className='main-section'>
+        
+    
+      
+      <Routes>
+      <Route path = "/" element={<HomePage data={data} setData={setData} />}></Route>
+     <Route path = "/dogs-details/:dogId" element={<DogDetailsPage data={data} setData={setData} />}></Route>
+     <Route path = "/add-dogs" element={<AddDogPage data={data} setData={setData}/>}></Route>
+     <Route path = "/update/:dogId" element={<UpdateDogPage data={data} setData={setData}/>}></Route>
+     <Route path = "*" element={<NotFoundPage />}></Route>
+     </Routes>
+      </section>
+
+      <Footer />
+  </main>
     </>
   )
 }

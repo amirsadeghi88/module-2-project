@@ -1,42 +1,329 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body{
+font-family: "Quicksand", sans-serif;;
+  margin:0px;
+  padding: 0px;
+  background-color: rgb(196, 242, 234);
+
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.navbar{
+  background-color: rgb(250, 126, 112);
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  position: sticky;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+a {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 18px;
+}
+a:hover {
+   color: rgb(42, 83, 83);
+}
+.nav-logo-section{
+  display: flex;
+}
+.navbar img{
+  width:100px;
+  
+  margin-left: 50px;
 }
 
-.card {
-  padding: 2em;
+.navbar h3{
+  margin-left:10px;
+  color: rgb(255, 255, 255);
+  font-size: 32px;
 }
 
-.read-the-docs {
-  color: #888;
+.nav-links{
+  color: rgb(255, 255, 255);
+  margin: 50px;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.container{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.intro-first{
+  color: rgb(42, 83, 83);
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-left: 70px;
+  margin-bottom: -25px;
+}
+.intro-second{
+  color: rgb(42, 83, 83);
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: 70px;
+  margin-bottom: 50px;
+}
+
+.main-dashboard{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 50px;
+  
+  
+
+}
+
+.dog-image{
+  width: 250px;
+  height:200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.card-info{
+  margin: 0 20px;
+  color: rgb(42, 83, 83);
+  
+}
+
+.dog-card{
+  display: flex;
+  box-shadow: 0px 5px rgba(250, 158, 147, 0.938);
+  
+  background-color: rgb(244, 244, 244);
+  flex-direction: row;
+ justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  max-width: 550px;
+  margin:20px
+}
+.card-description{
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.add-page-title{
+  color: rgb(42, 83, 83);
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-left: -40px;
+  margin-bottom: -25px;
+  width: 50%
+}
+
+.add-form{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
+  align-content: center;
+  width: 50vw;
+  height: 500px;
+
+}
+
+.add-form label{
+
+margin: 5px;
+padding: 5px;
+}
+
+input{
+  margin: 0px;
+}
+
+.form-page{
+  height: 70vh;;
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  margin: 50px;
+  font-weight: 500;
+}
+.input{
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 20px;
+  border: 1px solid rgb(42, 83, 83);;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.add-btn {
+  background-color:  rgb(42, 83, 83);
+  width: 200px;
+  color: #FFF;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Quicksand", sans-serif;;
+}
+
+.add-btn:hover{
+  background-color: rgb(250, 126, 112);
+}
+.dog-detail-image img{
+width: 800px;
+max-height: fit-content;
+border-radius: 20px 0px 0px 20px; 
+margin-bottom: -4px;
+padding: 0px;
+
+
+
+}
+.dog-detail{
+  
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  justify-content:flex-start;
+  align-items:center;
+  align-content: flex-start;
+  color: rgb(42, 83, 83);
+  background-color: white;
+  margin:50px;
+  border-radius: 20px;
+  max-height: 800px;
+  padding-bottom: 0%;
+  box-shadow: 0px 5px rgba(250, 158, 147, 0.938);
+  
+}
+
+#dog-image{
+  margin: 0px;
+}
+
+.dog-detail-fact{
+  background-color: rgb(42, 83, 83);
+  min-width: 70px;
+  max-height: fit-content;
+  padding: 10px;
+  border-radius: 20px;
+  border:none;
+  color: aliceblue;
+  margin-bottom: 0px;
+}
+.dog-detail-info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width:800px;
+  margin-left: 100px;
+  margin-bottom: 0px;
+  
+}
+
+.dog-detail-title{
+  font-size: 48px;
+  margin-bottom: 20px;
+  
+}
+
+.line{
+  border: 1px solid rgb(42, 83, 83);
+  width: 550px;
+  margin-bottom: 20px;
+}
+.dog-detail-first{
+  
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 500px;
+  align-items: flex-start;
+  align-content:flex-start;
+  font-size: 12px;
+  margin-top:20px;
+}
+
+.dog-detail-description{
+  font-weight: 700;
+font-size: 18px;
+}
+
+.dog-detai-text{
+font-weight: 400;
+font-size: 16px;
+}
+
+.dog-detail-buttons{
+margin-top: 50px;
+justify-content: flex-end;
+display: flex;
+flex-direction: row;
+width: 600px;
+margin-left: 100px;
+}
+.dog-detail-btn{
+background-color:  rgb(250, 126, 112);
+  width:25px;
+  color: #FFF;
+  padding: 10px;
+  border: none;
+  border-radius: 100px;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "Quicksand", sans-serif;
+  margin-left: 20px;
+}
+
+.dog-detail-btn:hover{
+  background-color: rgb(42, 83, 83);
+}
+
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  background-color: rgb(250, 126, 112);
+  margin: 0px;
+  padding: 0px;
+  width:100;
+}
+
+.footer-links{
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 500px
 }
