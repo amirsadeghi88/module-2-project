@@ -47,7 +47,7 @@ async function handleAddNewDog (event){
       );
       console.log("res: ", response.data);
       dogToAdd.image= response.data.url 
-    const res = await axios.post("http://localhost:4000/dogs", 
+    const res = await axios.post("${API_URL}/dogs", 
       dogToAdd);
       console.log(res);
   setData([dogToAdd, ...data]);

@@ -17,7 +17,7 @@ const[disease, setDisease] = useState("");
 const[fact, setFact] = useState("");
 
 useEffect(()=>{
-axios.get(`http://localhost:4000/dogs/${dogId}`)
+axios.get(`${API_URL}/dogs/${dogId}`)
 .then(res=>{
   setBreed(res.data.breed)
   setImage(res.data.image)
@@ -54,7 +54,7 @@ async function handleUpdateDog (event){
     max_weight_kg: Number(maxWeight)
   };
 try {
-    const res = await axios.put(`http://localhost:4000/dogs/${dogId}`, 
+    const res = await axios.put(`${API_URL}/dogs/${dogId}`, 
       updatedDogInfo);
       const updatedData = data.map((dog)=>{
 if (dog.id == dogId){

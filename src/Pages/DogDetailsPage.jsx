@@ -12,7 +12,7 @@ function DogDetailsPage({data, setData}) {
   const [dog, setDog] = useState([]);
   const nav = useNavigate();
   useEffect(()=>{
-axios.get(`http://localhost:4000/dogs/${dogId}`)
+axios.get(`${API_URL}/dogs/${dogId}`)
 .then((res)=>{
   console.log(res)
   setDog(res.data);       
@@ -22,7 +22,7 @@ axios.get(`http://localhost:4000/dogs/${dogId}`)
 .catch(err=>console.log(err))
 },[dogId])
  function handleDelete(){
-         axios.delete(`http://localhost:4000/dogs/${dogId}`)
+         axios.delete(`${API_URL}/dogs/${dogId}`)
          .then((res)=>{
           const filteredData = data.filter((oneDog)=>{
 if(oneDog.id != dogId){

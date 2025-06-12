@@ -13,9 +13,10 @@ import axios from 'axios';
 
 
 function App() {
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000"
   const [data, setData] = useState([]);
   useEffect(()=>{
-axios.get("http://localhost:4000/dogs")
+axios.get(`${API_URL}/dogs`)
 .then((res)=>{
   console.log(res)
   setData(res.data);
