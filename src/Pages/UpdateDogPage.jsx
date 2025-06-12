@@ -15,8 +15,9 @@ const[maxAge, setMaxAge] = useState(0);
 const[maxWeight, setMaxWeight] = useState(0);
 const[disease, setDisease] = useState("");
 const[fact, setFact] = useState("");
-
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000"
 useEffect(()=>{
+  
 axios.get(`${API_URL}/dogs/${dogId}`)
 .then(res=>{
   setBreed(res.data.breed)

@@ -11,6 +11,7 @@ function DogDetailsPage({data, setData}) {
   const{dogId} = useParams();
   const [dog, setDog] = useState([]);
   const nav = useNavigate();
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000"
   useEffect(()=>{
 axios.get(`${API_URL}/dogs/${dogId}`)
 .then((res)=>{

@@ -21,7 +21,7 @@ const handleMaxAgeChange =(e) => setmaxAge(e.target.value);
 const handleMaxWeightChange =(e) => setmaxWeight(e.target.value);
 const handleDiseaseChange =(e) => setDisease(e.target.value);
 const handleFactChange =(e) => setFact(e.target.value);
-
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000"
 async function handleAddNewDog (event){
   event.preventDefault();
   const dogToAdd = { 
